@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -7,12 +9,29 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
         appBar: AppBar(
-          title: const Text('My coffe card'),
+          title: const Text('My coffe card', style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),),
           backgroundColor: Colors.brown,
           centerTitle: true,
         ),
 
-        body: const Text("hello dirty bean water"),
+        body: Column(
+          crossAxisAlignment:CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              color: Colors.brown[200],
+              padding: const EdgeInsets.all(20),
+              child:  const Text("How I like my coffee"),
+            ),
+            Container(
+              color: Colors.brown[100],
+              padding: const EdgeInsets.all(20),
+              child:  const Text("Coffee prefs"),
+            )
+          ],
+        ),
     );
   }
 }
