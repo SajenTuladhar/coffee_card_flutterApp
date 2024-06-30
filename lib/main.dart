@@ -1,16 +1,11 @@
+import 'package:coffee_card/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp( MaterialApp(
+  runApp( const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Scaffold(
-      appBar: AppBar(
-        title: const Text("Coffee Card"),
-        centerTitle: true,
-        backgroundColor: Colors.brown,),
-    
-    body: const Text("Hello neenjaa"),
-    ),  
+    home: Home()
+   
   ));
 } 
 
