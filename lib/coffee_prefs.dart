@@ -5,20 +5,31 @@ class CoffeePrefs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       children: [
         Row(
           children: [
-            Text("Strength:"),
-            Text("3") , // will be dynamically getting this later
-            SizedBox(width: 50,)
+            const Text("Strength:"),
+            const Text("3") , // will be dynamically getting this later
+            Image.asset('assets/img/coffee_bean.png',
+            width: 25,
+            color: Colors.brown[100],
+            colorBlendMode: BlendMode.multiply, // this blendmode removes background for the image as the color of the image is set to the color of the container
+            ),
+             const Expanded(child: SizedBox()),
+            const Text('+') // Is gonna be a button later to increment
           ],
         ),
         Row(
           children: [
-            Text("Sugars:"),
-            Text("3") , // will be dynamically getting this later
-            SizedBox(width: 50,)
+            const  Text("Sugars:"),
+            const Text("3") , // will be dynamically getting this later
+             Image.asset('assets/img/sugar_cube.png', 
+             width: 25,
+             color: Colors.brown[100],
+            colorBlendMode: BlendMode.multiply,),
+            const Expanded(child:  SizedBox()),
+            const Text('+')// is gonna be button later to increment 
           ],
         )
       ],
